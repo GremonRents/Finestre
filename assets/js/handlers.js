@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    //$("*").contextmenu(disableDefaultBehaviour);
+    $("#background_container").contextmenu(disableDefaultBehaviour);
     addBackgroundHandler();
     addTaskbarHandlers();
 });
