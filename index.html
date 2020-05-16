@@ -9,36 +9,17 @@
     </head>
     <body>
         <div id="background_container">
-            <div id="shell_container" class="opaque draggable_window shell_color window_container">
-                <div class="title_bar draggable_bar">
-                    <div class="title_section">
-                        <div class="icon_container"><img src="./assets/images/icons/terminal.svg" class="icon"></div>
-                        <span class="center">Shell</span>
-                    </div>
-                    
-                    <div class="icons_section">
-                        <div class="icon_container minimize"><img src="./assets/images/icons/minimize.svg" class ="icon" alt="minimize"></div>
-                        <div class="icon_container maximize"><img src="./assets/images/icons/maximize.svg" class ="icon" alt = "maximize"></div>
-                        <div class="icon_container close"><img src="./assets/images/icons/close.svg" class = "icon" alt="close"></div>
-                    </div>
-                </div>
-                <div class="shell_content shell_color">
-                    <div id="previous_input"></div>
-                    <input type="text" name="input" class="shell_input shell_color font">
-                </div>
-            </div>
+            
 
 
         </div>
 
         <div class="taskbar">
-            <div class="logo_container">
-                <img src="./assets/images/icon.svg" class="logo" alt="logo">
-            </div>
-            <div class="divider">
-
-            </div>
-
+            <div class="app_container"><img src="./assets/images/icon.svg" class="app_icon" alt="logo"></div>
+            <div class="divider"></div>
+            <div class="app_container shell_app"><img src="./assets/images/apps/shell.svg" class="app_icon" alt="shell"></div>
+            <div class="app_container upload_app"> <img src="./assets/images/apps/upload.svg" class="app_icon" alt="upload"></div>
+            <div class="clock"></div>
         </div>
 
         
@@ -46,7 +27,10 @@
     <script src="./assets/js/WindowManager/Window.js"></script>
     <script src="./assets/js/WindowManager/WindowManager.js"></script>
     <script src="./assets/js/WindowManager/WindowButtons.js"></script>
+    <script src="./assets/js/TaskBar/taskbar.js"></script>
     <script src="./assets/js/windowsHandlers.js"></script>
+    <script src="./assets/js/taskbarHandlers.js"></script>
+    <script src="./assets/js/handlers.js"></script>
     <script src="./assets/js/Shell/shell.js"></script>
     </body>
 </html>

@@ -1,16 +1,25 @@
-$(function () {
+function addWindowHandler(){
     $(".draggable_bar").mousedown(startDragging);
-    $("#background_container").mousemove(onDrag);
-    $("#background_container").mouseup(onDrop);
-    $(".draggable_window").mouseover(setActiveWindow);
+    $(".draggable_window").mouseenter(setActiveWindow);
 
     $(".minimize").mousedown(minimizeWindow);
     $(".maximize").mousedown(maximizeWindow);
     $(".close").mousedown(closeWindow);
+}
 
-    // Disable context menu (taso destro-> salva con nome...)
-    //$("*").contextmenu(disableDefaultBehaviour);  
-});
+function removeWindowHandler(){
+    $(".draggable_bar").unbind();
+    $(".draggable_window").unbind();
+
+    $(".minimize").unbind();
+    $(".maximize").unbind();
+    $(".close").unbind();
+}
+
+function addBackgroundHandler(){
+    $("#background_container").mousemove(onDrag);
+    $("#background_container").mouseup(onDrop);
+}
 
 
 

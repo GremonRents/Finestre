@@ -19,6 +19,7 @@ class Window{
         this.realWindow = $("#"+id);
     }
 
+
     saveDimensions(){
         let width = this.realWindow.css("width");
         let height = this.realWindow.css("height");

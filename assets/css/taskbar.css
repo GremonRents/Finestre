@@ -6,22 +6,36 @@
     background-color: rgba(0, 45, 79, 0.8);
 }
 
-.logo_container{
+.app_container{
     float: left;
     height: 100%;
     width: 3%;
 }
 
-.logo{
+.app_icon{
     height: 100%;
     width: 100%;
 }
 
+.app_icon:hover{
+    background-color: rgb(56,84,109);
+}
 
 .divider{
     float: left;
     border-left: 1px solid rgb(56,84,109); 
     border-right: 1px solid rgb(22,34,44); 
     height: 100%;
-    width: 1px;
+    width: 0px;
 }
+
+.clock{
+    float: right;
+    color: white;
+    white-space: pre-line;
+    text-align: center;
+    height: 100%;
+    margin-right: 5px;
+    text-shadow: 3px 3px 3px black;
+}
+

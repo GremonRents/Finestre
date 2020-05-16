@@ -23,7 +23,7 @@
     opacity: 0.9;
 }
 
-
-.font{
-    font-size-adjust: inherit;
+.shell_font {
+    color: white;
+    font-family: Consolas;
 }

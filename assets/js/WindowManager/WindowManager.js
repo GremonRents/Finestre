@@ -3,6 +3,7 @@ let activeWindow = null;
 let windows = new Object();
 
 
+
 function startDragging(event){
     disableDefaultBehaviour(event);
     if(event.target == event.currentTarget && isLeftMouseButton(event.button)){
@@ -31,8 +32,6 @@ function onDrop(event){
 function setActiveWindow(){
     if(!leftMouseButtonPressed){
         let activeId = $(this).attr("id");
-        if(!windows[activeId])
-            windows[activeId] = new Window(activeId);
         activeWindow = windows[activeId];
     }
     
