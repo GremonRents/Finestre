@@ -1,0 +1,46 @@
+.title_bar{
+    position: absolute;
+    background-color:  rgb(34, 108, 224);
+    width: 100%;
+    height: 5%;
+}
+
+.icons_section{
+    float: right;
+    height: 100%;
+}
+
+.title_section{
+    position: relative;
+    float: left;
+    height: 100%;
+}
+
+.icon_container{
+    height: 100%;
+    width: 50px;
+    display: inline-block;
+}
+
+.icon{
+    width: 100%;
+    height: 100%;
+    filter: invert(1);
+}
+
+.close:hover{
+    background-color: red;
+}
+
+.minimize:hover{
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.maximize:hover{
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.center{
+    text-align: center;
+}
+

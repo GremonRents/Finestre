@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <title> Finestre </title>
+        <link rel="icon" href="./assets/images/icon.svg">
+        <link rel="stylesheet" href="./assets/css/title_bar.css">
+        <link rel="stylesheet" href="./assets/css/window.css">
+        <link rel="stylesheet" href="./assets/css/shell.css">
+        <link rel="stylesheet" href="./assets/css/taskbar.css">
+    </head>
+    <body>
+        <div id="background_container">
+            <div id="shell_container" class="opaque draggable_window shell_color window_container">
+                <div class="title_bar draggable_bar">
+                    <div class="title_section">
+                        <div class="icon_container"><img src="./assets/images/icons/terminal.svg" class="icon"></div>
+                        <span class="center">Shell</span>
+                    </div>
+                    
+                    <div class="icons_section">
+                        <div class="icon_container minimize"><img src="./assets/images/icons/minimize.svg" class ="icon" alt="minimize"></div>
+                        <div class="icon_container maximize"><img src="./assets/images/icons/maximize.svg" class ="icon" alt = "maximize"></div>
+                        <div class="icon_container close"><img src="./assets/images/icons/close.svg" class = "icon" alt="close"></div>
+                    </div>
+                </div>
+                <div class="shell_content shell_color">
+                    <div id="previous_input"></div>
+                    <input type="text" name="input" class="shell_input shell_color font">
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="taskbar">
+            <div class="logo_container">
+                <img src="./assets/images/icon.svg" class="logo" alt="logo">
+            </div>
+            <div class="divider">
+
+            </div>
+
+        </div>
+
+        
+    <script src="./assets/js/jquery-3.5.1.min.js"></script>
+    <script src="./assets/js/WindowManager/Window.js"></script>
+    <script src="./assets/js/WindowManager/WindowManager.js"></script>
+    <script src="./assets/js/WindowManager/WindowButtons.js"></script>
+    <script src="./assets/js/windowsHandlers.js"></script>
+    <script src="./assets/js/Shell/shell.js"></script>
+    </body>
+</html>

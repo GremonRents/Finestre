@@ -1,0 +1,29 @@
+.shell_content{
+    position: absolute;
+    overflow-y: scroll;
+    top: 5%;
+    width: 100%;
+    height: 95%;
+}
+
+.shell_input{
+    color: white;
+    width: 100%;
+    outline: none;
+    border: 0px;
+    padding-top: 0px;
+    margin-top: 0px;
+}
+
+.shell_color{
+    background-color: rgba(0, 0, 0);
+}
+
+.opaque{
+    opacity: 0.9;
+}
+
+
+.font{
+    font-size-adjust: inherit;
+}
