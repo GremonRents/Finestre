@@ -15,25 +15,23 @@ class Window{
         this.offsetX = 0;
         this.offsetY = 0;
         this.windowed = true;
-        this.closed = false;
         this.id = id;
         this.addHandlers(id);
         this.realWindow = $("#"+id);
+        this.inForeground();
     }
+
+    static foreground = 0;
 
 
     saveDimensions(){
-        let width = this.realWindow.css("width");
-        let height = this.realWindow.css("height");
-        this.lastWidth = width;
-        this.lastHeight = height;
+        this.lastWidth = this.realWindow.css("width");
+        this.lastHeight = this.realWindow.css("height");
     }
 
     saveCoordinates(){
-        let left = this.realWindow.css("left");
-        let top = this.realWindow.css("top");
-        this.lastLeft = left;
-        this.lastTop = top;
+        this.lastLeft = this.realWindow.css("left");
+        this.lastTop = this.realWindow.css("top");
     }
     
     saveOffsets(offsetX, offsetY){
@@ -43,7 +41,7 @@ class Window{
 
     setWindowed(){
         this.realWindow.css({width: this.lastWidth, height: this.lastHeight});
-        this.realWindow.css({top: this.lastTop, left: this.lastLeft});
+        this.realWindow.css({left: this.lastLeft, top: this.lastTop});
         this.windowed = true;
     }
 
@@ -56,10 +54,6 @@ class Window{
 
     isWindowed(){
         return this.windowed;
-    }
-
-    setClosed(closed){
-        this.closed = closed;
     }
 
     minimize(){
@@ -75,12 +69,8 @@ class Window{
         this.realWindow.css({left: x - this.offsetX, top: y - this.offsetY});
     }
 
-    inBackground(){
-        this.realWindow.css({"z-index": 0});
-    }
-
     inForeground(){
-        this.realWindow.css({"z-index": 1});
+        this.realWindow.css({"z-index": Window.foreground++});
     }
 
     getId(){

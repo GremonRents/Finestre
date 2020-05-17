@@ -2,15 +2,12 @@ let leftMouseButtonPressed = false;
 let activeWindow = null;
 let windows = [];
 
-
-
 function startDragging(event){
     disableDefaultBehaviour(event);
     if(event.target == event.currentTarget && isLeftMouseButton(event.button)){
         leftMouseButtonPressed = true;
         activeWindow.saveOffsets(event.offsetX, event.offsetY);
     }
-    setAllWindowsInBackground();
     activeWindow.inForeground();
 }
 
@@ -44,15 +41,6 @@ function disableDefaultBehaviour(event){
     event.stopPropagation();
     event.preventDefault();  
 }
-
-function setAllWindowsInBackground(){
-    for(i in windows){
-        if(windows[i])
-            windows[i].inBackground();
-    }
-}
-
-
 
 function minimizeWindow(event){
 
