@@ -14,7 +14,7 @@ function newShell(event){
                     <div class="icon_container close"><img src="./assets/images/title_bar/close.svg" class = "icon" alt="close"></div>
                 </div>
             </div>
-            <div class="shell_content shell_color">
+            <div class="window_content shell_content shell_color">
                 <div id="previous_input"></div>
                 <input type="text" name="input" class="shell_input shell_color shell_font">
             </div>

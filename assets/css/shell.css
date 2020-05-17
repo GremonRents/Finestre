@@ -1,8 +1,7 @@
-.shell_content{
-    position: absolute;
+
+.window_content.shell_content {
     overflow-y: scroll;
     top: 5%;
-    width: 100%;
     height: 95%;
 }
 
