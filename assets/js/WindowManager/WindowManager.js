@@ -47,7 +47,8 @@ function disableDefaultBehaviour(event){
 
 function setAllWindowsInBackground(){
     for(i in windows){
-        windows[i].inBackground();
+        if(windows[i])
+            windows[i].inBackground();
     }
 }
 
@@ -68,5 +69,5 @@ function maximizeWindow(){
 
 function closeWindow(){
     activeWindow.close();
-    windows.splice(activeWindow.getId(), 1);
+    windows[activeWindow.getId()] = null;
 }

@@ -1,7 +1,14 @@
-let id = 0;
-
+function freeId(){
+    for(let i = 0; i < windows.length; i++){
+        if(windows[i] == null){
+            return i;
+        }
+    }
+    return windows.length;
+}
 
 function newShell(event){
+    let id = freeId();
     $("#background_container").append(
         `<div id="${id}" class="opaque draggable_window shell_color window_container">
             <div class="title_bar draggable_bar">
@@ -20,7 +27,6 @@ function newShell(event){
             </div>
         </div>`);
     windows[id] = new Window(id);
-    id++;
 }
 
 function newUpload(event){
