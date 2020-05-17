@@ -87,8 +87,8 @@ class Window{
     }
 
     addHandlers(id){
+        $(`#${id}.draggable_window`).mousedown(changeActiveWindow);
         $(`#${id} .draggable_bar`).mousedown(startDragging);
-        $(`#${id}.draggable_window`).mouseenter(setActiveWindow);
     
         $(`#${id} .mimize`).mousedown(minimizeWindow);
         $(`#${id} .maximize`).mousedown(maximizeWindow);

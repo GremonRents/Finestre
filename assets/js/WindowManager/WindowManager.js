@@ -1,17 +1,17 @@
 let leftMouseButtonPressed = false;
 let activeWindow = null;
+changed = false;
 let windows = [];
 
 
 
 function startDragging(event){
     disableDefaultBehaviour(event);
+    setActiveWindow(event.currentTarget.parentElement.id);
     if(event.target == event.currentTarget && isLeftMouseButton(event.button)){
         leftMouseButtonPressed = true;
         activeWindow.saveOffsets(event.offsetX, event.offsetY);
     }
-    setAllWindowsInBackground();
-    activeWindow.inForeground();
 }
 
 function onDrag(event){
@@ -28,10 +28,16 @@ function onDrop(event){
 }
 
 
-
-function setActiveWindow(event){
-    if(!leftMouseButtonPressed){
-        activeWindow = windows[event.currentTarget.id];
+function changeActiveWindow(event){
+    disableDefaultBehaviour(event);
+    setActiveWindow(event.currentTarget.id);
+    
+}
+function setActiveWindow(window_id){
+    if(!activeWindow || activeWindow.getId() != window_id){
+        if(activeWindow) activeWindow.inBackground();
+        activeWindow = windows[window_id];
+        activeWindow.inForeground();
     }
     
 }
