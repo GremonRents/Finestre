@@ -16,6 +16,7 @@ class Window{
         this.offsetY = 0;
         this.windowed = true;
         this.closed = false;
+        this.addHandlers(id);
         this.realWindow = $("#"+id);
     }
 
@@ -74,6 +75,15 @@ class Window{
 
     inForeground(){
         this.realWindow.css({"z-index": 1});
+    }
+
+    addHandlers(id){
+        $(`#${id} .draggable_bar`).mousedown(startDragging);
+        $(`#${id}.draggable_window`).mouseenter(setActiveWindow);
+    
+        $(`#${id} .mimize`).mousedown(minimizeWindow);
+        $(`#${id} .maximize`).mousedown(maximizeWindow);
+        $(`#${id} .close`).mousedown(closeWindow);
     }
 
     

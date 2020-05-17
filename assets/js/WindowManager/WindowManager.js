@@ -29,10 +29,9 @@ function onDrop(event){
 
 
 
-function setActiveWindow(){
+function setActiveWindow(event){
     if(!leftMouseButtonPressed){
-        let activeId = $(this).attr("id");
-        activeWindow = windows[activeId];
+        activeWindow = windows[event.currentTarget.id];
     }
     
 }

@@ -20,12 +20,7 @@ function newShell(event){
             </div>
         </div>`);
     windows[id] = new Window(id);
-    removeWindowHandler();
-    addWindowHandler();
     id++;
-    
-    
-
 }
 
 function newUpload(event){
