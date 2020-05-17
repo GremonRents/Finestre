@@ -1,15 +1,6 @@
 let id = 0;
 
-clockTick();
-function clockTick(){
-    let now = new Date();
-    let month = (now.getMonth()+1);
-    month = ( month > 9 ? month : "0"+month);
-    let date = now.getDate() + "/" + month + "/" + now.getFullYear();
-    let time = now.getHours() + ":" + now.getMinutes();
-    $('.clock').text(time + "\n" + date);
-}
-setInterval(clockTick, 1000);
+
 function newShell(event){
     $("#background_container").append(
         `<div id="${id}" class="opaque draggable_window shell_color window_container">
