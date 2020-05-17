@@ -16,6 +16,7 @@ class Window{
         this.offsetY = 0;
         this.windowed = true;
         this.closed = false;
+        this.id = id;
         this.addHandlers(id);
         this.realWindow = $("#"+id);
     }
@@ -61,8 +62,12 @@ class Window{
         this.closed = closed;
     }
 
-    close(){
+    minimize(){
         this.realWindow.css({display: "none"});
+    }
+
+    close(){
+        this.realWindow.remove();
     }
 
     move(x, y){
@@ -75,6 +80,10 @@ class Window{
 
     inForeground(){
         this.realWindow.css({"z-index": 1});
+    }
+
+    getId(){
+        return this.id;
     }
 
     addHandlers(id){

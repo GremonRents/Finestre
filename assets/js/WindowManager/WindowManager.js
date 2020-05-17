@@ -1,6 +1,6 @@
 let leftMouseButtonPressed = false;
 let activeWindow = null;
-let windows = new Object();
+let windows = [];
 
 
 
@@ -68,4 +68,5 @@ function maximizeWindow(){
 
 function closeWindow(){
     activeWindow.close();
+    windows.splice(activeWindow.getId(), 1);
 }
