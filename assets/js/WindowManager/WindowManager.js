@@ -70,4 +70,11 @@ function maximizeWindow(){
 function closeWindow(){
     activeWindow.close();
     windows[activeWindow.getId()] = null;
+    compactWindowsArray();
+}
+
+
+function compactWindowsArray(){
+    for(var i = windows.length-1; windows[i] == null && i >= 0; i--){}
+    windows.length = i+1;
 }

@@ -12,6 +12,7 @@
     opacity: 0.9;
     width: 800px;
     height: 500px;
+    backface-visibility: hidden;
     border-left: 2px solid rgb(34, 108, 224);
     border-bottom: 2px solid rgb(34, 108, 224);
 }

@@ -71,6 +71,7 @@ class Window{
     }
 
     move(x, y){
+        //this.realWindow.css({transform: `translate(${(x-this.offsetX)+"px"}, ${(y-this.offsetY)+"px"})`});
         this.realWindow.css({left: x - this.offsetX, top: y - this.offsetY});
     }
 
