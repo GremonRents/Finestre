@@ -1,8 +1,6 @@
 
 .window_content.shell_content {
     overflow-y: scroll;
-    top: 5%;
-    height: 95%;
 }
 
 .shell_input{
