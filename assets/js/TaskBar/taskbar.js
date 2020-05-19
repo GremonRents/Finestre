@@ -45,12 +45,15 @@ function newUpload(event){
             </div>
             <div class="window_content">
                 <label class="upload_section">
-                    <input type="file" name="upload">
-                    <div class="upload_container"><img src="./assets/images/apps/upload_button.svg" alt="upload"></div>
+                    <form class="upload_form" enctype="multipart/form-data" method="POST" action="./assets/php/upload.php">
+                        <input type="file" name="upload">
+                        <div class="upload_container"><img src="./assets/images/apps/upload_button.svg" alt="upload"></div>
+                        <input type="submit" value="Upload" class="upload_button">
+                    </form>
                 </label>
             </div>
         </div>`);
-
+        addUploadHandler(id);
         windows[id] = new Window(id);
 
 }
