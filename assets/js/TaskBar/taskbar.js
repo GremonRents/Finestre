@@ -6,7 +6,7 @@ function freeId(){
     }
     return windows.length;
 }
-
+var c = null;
 function newShell(event){
     let id = freeId();
     $("#background_container").append(
@@ -55,6 +55,31 @@ function newUpload(event){
         </div>`);
         addUploadHandler(id);
         windows[id] = new Window(id);
+
+}
+
+
+
+function newPaint(event){
+    let id = freeId();
+    $("#background_container").append(
+        `<div id="${id}" class="draggable_window window_container">
+            <div class="title_bar draggable_bar">
+                <div class="title_section">
+                    <div class="icon_container"><img src="./assets/images/title_bar/paint.svg" class="icon"></div>
+                </div>
+                <div class="icons_section">
+                    <div class="icon_container minimize"><img src="./assets/images/title_bar/minimize.svg" class ="icon" alt="minimize"></div>
+                    <div class="icon_container maximize"><img src="./assets/images/title_bar/maximize.svg" class ="icon" alt = "maximize"></div>
+                    <div class="icon_container close"><img src="./assets/images/title_bar/close.svg" class = "icon" alt="close"></div>
+                </div>
+            </div>
+            <div class="window_content">
+               <canvas id="canvas"> </canvas>
+            </div>
+        </div>`);
+        windows[id] = new Window(id);
+        canvas = new Canvas();
 
 }
 
